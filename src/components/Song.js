@@ -1,11 +1,11 @@
 import React from "react";
 import Plater from "./Player";
-const Song = () => {
+const Song = ({currentSong}) => {
     return (
-        <div class="song-container">
-            <h1>picture</h1>
-            <h1>Song Name</h1>
-            <h1>Artist</h1>
+        <div className="song-container">
+            <img src={currentSong.cover} />
+            <h2>{currentSong.name}</h2>
+            <h3>{currentSong.artist}</h3>
         </div>
     );
 };
