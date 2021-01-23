@@ -36,7 +36,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
                     onClick={playSongHangler}
                     className="play"
                     size="2x"
-                    icon={isPlaying ? faPlay : faPause}
+                    icon={!isPlaying ? faPlay : faPause}
                 />
                 <FontAwesomeIcon
                     className="skip-forward"
