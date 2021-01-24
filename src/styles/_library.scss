@@ -1,0 +1,65 @@
+.library {
+    flex-basis: 450px;
+    flex-shrink: 1;
+    position: relative;
+    top: 0;
+    left: 0%;
+    width: 30vw;
+    max-height: 100vh;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    box-shadow: 10px 0px 20px 0px #e1e1e1;
+    left: 0;
+    transition: 200ms;
+    min-height: 100vh;
+
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &.hidden {
+        flex-basis: 0;
+        position: relative;
+
+        & ~ .show-btn {
+            // border: none;
+            // box-shadow: 1px 1px 5px 0 gray;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.head_belt {
+    display: flex;
+    justify-content: space-around;
+}
+
+.show-btn {
+    z-index: 100;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    width: auto;
+    min-width: 100px;
+    padding: 1rem 2rem;
+    outline: none;
+    box-shadow: 0px 2px 3px 1px rgb(184, 184, 184);
+    transition: 100ms;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(0, -3px);
+        box-shadow: 0px 4px 10px 0px rgb(184, 184, 184);
+    }
+}

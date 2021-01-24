@@ -1,5 +1,4 @@
 import React from "react";
-import Plater from "./Player";
 const Song = ({currentSong, isPlaying}) => {
     return (
         <div className="song-container">

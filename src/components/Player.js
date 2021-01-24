@@ -35,9 +35,9 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
     };
 
     const handleSliderChange = (e) => {
-        let value = e.target.value;
-        setSongTime({...songTime, currentTime: value});
-        audioRef.current.currentTime = value;
+        audioRef.current.currentTime = e.target.value;
+
+        setSongTime({...songTime, currentTime: e.target.value});
     };
 
     const songTimeUpdateHandler = (e) => {
@@ -45,7 +45,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
         setSongTime({
             ...songTime,
             currentTime: currentTime,
-            duration: e.target.duration,
+            duration: Math.floor(e.target.duration),
         });
     };
     return (
@@ -57,7 +57,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
                     value={songTime.currentTime}
                     onChange={handleSliderChange}
                     min={0}
-                    max={songTime.duration}
+                    max={182}
                 />
                 <p>{formatTime(songTime.duration)}</p>
             </div>
